@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+JWT implmented using Devise : Authentication implmentation 
+
+References
+
+https://www.youtube.com/watch?v=Wq9i77BUBlQ  ===> Watch this fully
+https://dakotaleemartinez.com/tutorials/devise-jwt-api-only-mode-for-authentication/
+https://github.com/heartcombo/devise
