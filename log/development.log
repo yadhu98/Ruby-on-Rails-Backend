@@ -941,3 +941,127 @@ Processing by Api::V1::ChallengesController#index as */*
 Completed 200 OK in 42ms (Views: 19.9ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/api/v1/challenges/2" for 127.0.0.1 at 2025-04-20 12:32:54 +0530
+Processing by Api::V1::ChallengesController#show as */*
+  Parameters: {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "id" => "2", "challenge" => {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (1.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 2 LIMIT 1 /*action='show',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:23:in 'Api::V1::ChallengesController#show'
+Completed 200 OK in 26ms (Views: 1.1ms | ActiveRecord: 10.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/api/v1/challenges/2" for 127.0.0.1 at 2025-04-20 12:35:21 +0530
+Processing by Api::V1::ChallengesController#update as */*
+  Parameters: {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "id" => "2", "challenge" => {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (0.8ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 2 LIMIT 1 /*action='update',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:32:in 'Api::V1::ChallengesController#update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:33:in 'Api::V1::ChallengesController#update'
+  [1m[36mChallenge Update (2.8ms)[0m  [1m[33mUPDATE "challenges" SET "title" = 'Challenge3', "description" = 'YOur challenge is to be inside fire for 10 minutes', "end_date" = '2025-05-06', "updated_at" = '2025-04-20 07:05:21.112293' WHERE "challenges"."id" = 2 /*action='update',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:33:in 'Api::V1::ChallengesController#update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*action='update',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:33:in 'Api::V1::ChallengesController#update'
+Completed 200 OK in 56ms (Views: 0.2ms | ActiveRecord: 17.1ms (2 queries, 0 cached) | GC: 14.3ms)
+
+
+Started GET "/api/v1/challenges/2" for 127.0.0.1 at 2025-04-20 12:35:28 +0530
+Processing by Api::V1::ChallengesController#show as */*
+  Parameters: {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "id" => "2", "challenge" => {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 2 LIMIT 1 /*action='show',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:23:in 'Api::V1::ChallengesController#show'
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/api/v1/challenges/2" for 127.0.0.1 at 2025-04-20 12:36:56 +0530
+Processing by Api::V1::ChallengesController#destroy as */*
+  Parameters: {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "id" => "2", "challenge" => {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 2 LIMIT 1 /*action='destroy',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:41:in 'Api::V1::ChallengesController#destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='destroy',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:42:in 'Api::V1::ChallengesController#destroy'
+  [1m[36mChallenge Destroy (2.5ms)[0m  [1m[31mDELETE FROM "challenges" WHERE "challenges"."id" = 2 /*action='destroy',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:42:in 'Api::V1::ChallengesController#destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*action='destroy',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:42:in 'Api::V1::ChallengesController#destroy'
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 8.9ms (2 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/api/v1/challenges/2" for 127.0.0.1 at 2025-04-20 12:37:00 +0530
+Processing by Api::V1::ChallengesController#show as */*
+  Parameters: {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "id" => "2", "challenge" => {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (2.0ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 2 LIMIT 1 /*action='show',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:23:in 'Api::V1::ChallengesController#show'
+Completed 404 Not Found in 5ms (ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=2):
+  
+app/controllers/api/v1/challenges_controller.rb:23:in 'Api::V1::ChallengesController#show'
+Started GET "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:37:05 +0530
+Processing by Api::V1::ChallengesController#index as */*
+  Parameters: {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:6:in 'IO#puts'
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/challenges/5" for 127.0.0.1 at 2025-04-20 12:37:27 +0530
+Processing by Api::V1::ChallengesController#show as */*
+  Parameters: {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "id" => "5", "challenge" => {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (0.9ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5 LIMIT 1 /*action='show',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:23:in 'Api::V1::ChallengesController#show'
+Completed 200 OK in 12ms (Views: 2.7ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:37:31 +0530
+Processing by Api::V1::ChallengesController#index as */*
+  Parameters: {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (0.6ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:6:in 'IO#puts'
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/api/v1/challenges/5" for 127.0.0.1 at 2025-04-20 12:37:47 +0530
+Processing by Api::V1::ChallengesController#update as */*
+  Parameters: {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "id" => "5", "challenge" => {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (0.7ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5 LIMIT 1 /*action='update',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:32:in 'Api::V1::ChallengesController#update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:33:in 'Api::V1::ChallengesController#update'
+  [1m[36mChallenge Update (1.4ms)[0m  [1m[33mUPDATE "challenges" SET "title" = 'Challenge3', "updated_at" = '2025-04-20 07:07:47.767587' WHERE "challenges"."id" = 5 /*action='update',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:33:in 'Api::V1::ChallengesController#update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='update',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:33:in 'Api::V1::ChallengesController#update'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 2.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:37:52 +0530
+Processing by Api::V1::ChallengesController#index as */*
+  Parameters: {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:6:in 'IO#puts'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/api/v1/challenges/5" for 127.0.0.1 at 2025-04-20 12:38:00 +0530
+Processing by Api::V1::ChallengesController#destroy as */*
+  Parameters: {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "id" => "5", "challenge" => {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5 LIMIT 1 /*action='destroy',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:41:in 'Api::V1::ChallengesController#destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='destroy',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:42:in 'Api::V1::ChallengesController#destroy'
+  [1m[36mChallenge Destroy (0.7ms)[0m  [1m[31mDELETE FROM "challenges" WHERE "challenges"."id" = 5 /*action='destroy',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:42:in 'Api::V1::ChallengesController#destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*action='destroy',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:42:in 'Api::V1::ChallengesController#destroy'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:38:05 +0530
+Processing by Api::V1::ChallengesController#index as */*
+  Parameters: {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge3", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:6:in 'IO#puts'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
