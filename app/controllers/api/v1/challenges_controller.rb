@@ -10,14 +10,20 @@ module Api
       # def show
       # end
 
-      # def create
-      #   puts params
-      #   @challenge = Challenge.new(params)
+      def create
+        challenge = Challenge.new(challenge_params)
+        if challenge.save
+          render json: { message: 'Added sucessfully', data: challenge }, status: 200
+        else
+          render json: { message: 'Failed to add', data: challenge.errors }
+        end
+      end
 
-      #   return unless @challenge.save
+      private
 
-      #   render json: @challenge
-      # end
+      def challenge_params
+        params.require(:challenge).permit(:title, :description, :start_date, :end_date)
+      end
 
       # def update
       # end

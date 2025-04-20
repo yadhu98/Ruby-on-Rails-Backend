@@ -837,3 +837,107 @@ Processing by Api::V1::ChallengesController#index as */*
 Completed 200 OK in 150ms (Views: 2.5ms | ActiveRecord: 55.0ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:12:08 +0530
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 17.2ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/api/v1/challenges_controller.rb:15:in 'Api::V1::ChallengesController#create'
+Started GET "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:12:38 +0530
+Processing by Api::V1::ChallengesController#index as */*
+  Parameters: {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (16.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:6:in 'IO#puts'
+Completed 200 OK in 42ms (Views: 1.7ms | ActiveRecord: 15.0ms (1 query, 0 cached) | GC: 5.8ms)
+
+
+Started GET "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:15:15 +0530
+Processing by Api::V1::ChallengesController#index as */*
+  Parameters: {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (1.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:6:in 'IO#puts'
+Completed 200 OK in 19ms (Views: 1.3ms | ActiveRecord: 27.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:15:20 +0530
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method 'challenges_params' for an instance of Api::V1::ChallengesController):
+  
+app/controllers/api/v1/challenges_controller.rb:14:in 'Api::V1::ChallengesController#create'
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:18:18 +0530
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+[31mUnpermitted parameters: :start_date, :end_date. Context: { controller: Api::V1::ChallengesController, action: create, request: #<ActionDispatch::Request:0x0000000121374d90>, params: {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "controller" => "api/v1/challenges", "action" => "create", "challenge" => {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}} }[0m
+[31mUnpermitted parameters: :start_date, :end_date. Context: { controller: Api::V1::ChallengesController, action: create, request: #<ActionDispatch::Request:0x0000000121374d90>, params: {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "controller" => "api/v1/challenges", "action" => "create", "challenge" => {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:17:in 'Api::V1::ChallengesController#create'
+  [1m[36mChallenge Create (7.0ms)[0m  [1m[32mINSERT INTO "challenges" ("title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ('Challenge2', 'YOur challenge is to be inside fire for 10 minutes', NULL, NULL, '2025-04-20 06:48:18.557277', '2025-04-20 06:48:18.557277') RETURNING "id" /*action='create',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:17:in 'Api::V1::ChallengesController#create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK /*action='create',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:17:in 'Api::V1::ChallengesController#create'
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 27.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "start_date" of relation "challenges" violates not-null constraint
+DETAIL:  Failing row contains (3, Challenge2, YOur challenge is to be inside fire for 10 minutes, null, null, 2025-04-20 06:48:18.557277, 2025-04-20 06:48:18.557277).
+)
+Caused by: PG::NotNullViolation (ERROR:  null value in column "start_date" of relation "challenges" violates not-null constraint
+DETAIL:  Failing row contains (3, Challenge2, YOur challenge is to be inside fire for 10 minutes, null, null, 2025-04-20 06:48:18.557277, 2025-04-20 06:48:18.557277).
+)
+
+Information for: ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "start_date" of relation "challenges" violates not-null constraint
+DETAIL:  Failing row contains (3, Challenge2, YOur challenge is to be inside fire for 10 minutes, null, null, 2025-04-20 06:48:18.557277, 2025-04-20 06:48:18.557277).
+):
+  
+
+Information for cause: PG::NotNullViolation (ERROR:  null value in column "start_date" of relation "challenges" violates not-null constraint
+DETAIL:  Failing row contains (3, Challenge2, YOur challenge is to be inside fire for 10 minutes, null, null, 2025-04-20 06:48:18.557277, 2025-04-20 06:48:18.557277).
+):
+  
+app/controllers/api/v1/challenges_controller.rb:17:in 'Api::V1::ChallengesController#create'
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:25:35 +0530
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:15:in 'Api::V1::ChallengesController#create'
+  [1m[36mChallenge Create (3.3ms)[0m  [1m[32mINSERT INTO "challenges" ("title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ('Challenge2', 'YOur challenge is to be inside fire for 10 minutes', '2025-04-20', '2025-05-06', '2025-04-20 06:55:35.978794', '2025-04-20 06:55:35.978794') RETURNING "id" /*action='create',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:15:in 'Api::V1::ChallengesController#create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*action='create',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:15:in 'Api::V1::ChallengesController#create'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 16.8ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+  
+NameError (undefined local variable or method 'challenge' for an instance of Api::V1::ChallengesController):
+  
+app/controllers/api/v1/challenges_controller.rb:16:in 'Api::V1::ChallengesController#create'
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:26:03 +0530
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:15:in 'Api::V1::ChallengesController#create'
+  [1m[36mChallenge Create (1.2ms)[0m  [1m[32mINSERT INTO "challenges" ("title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ('Challenge2', 'YOur challenge is to be inside fire for 10 minutes', '2025-04-20', '2025-05-06', '2025-04-20 06:56:03.618419', '2025-04-20 06:56:03.618419') RETURNING "id" /*action='create',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:15:in 'Api::V1::ChallengesController#create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='create',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:15:in 'Api::V1::ChallengesController#create'
+Completed 200 OK in 34ms (Views: 4.7ms | ActiveRecord: 15.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/challenges" for 127.0.0.1 at 2025-04-20 12:26:10 +0530
+Processing by Api::V1::ChallengesController#index as */*
+  Parameters: {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06", "challenge" => {"title" => "Challenge2", "description" => "YOur challenge is to be inside fire for 10 minutes", "start_date" => "2025-04-20", "end_date" => "2025-05-06"}}
+  [1m[36mChallenge Load (2.6ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='RubyonrailsBackend',controller='challenges'*/[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:6:in 'IO#puts'
+Completed 200 OK in 42ms (Views: 19.9ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
